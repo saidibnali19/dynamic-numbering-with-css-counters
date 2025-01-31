@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: min(100% - 2 * 1rem, 45rem);
+    margin-inline: auto;
+}
+
+ul {
+    counter-reset: counter;
+    padding: 1rem;
+}
+
+li {
+    counter-increment: counter;
+}
+
+li::marker {
+    color: grey;
+    font-size: 0.75em;
+    content: counter(counter, decimal-leading-zero) ". ";
+}
